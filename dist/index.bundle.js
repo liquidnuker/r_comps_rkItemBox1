@@ -172,6 +172,49 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function RkItemBox101_imgHolder(props) {
+  return React.createElement(
+    "div",
+    { className: "rkitemBox101_img-holder" },
+    React.createElement("img", { src: "img.jpg", alt: "img alt", title: "Image Title" })
+  );
+}
+
+function RkItemBox101_content(props) {
+  return React.createElement(
+    "div",
+    null,
+    React.createElement(
+      "h3",
+      { className: "rkitemBox101_heading" },
+      "ItemBox title"
+    ),
+    React.createElement("hr", null),
+    React.createElement(
+      "p",
+      null,
+      props.pr_text
+    )
+  );
+}
+
+function RkItemBox101_btnHolder(props) {
+  return React.createElement(
+    "div",
+    { className: "rkitemBox101_btn-holder" },
+    React.createElement(
+      "button",
+      { className: "btn btn1-01", "data-message": "button1", tabindex: "0" },
+      "button1"
+    ),
+    React.createElement(
+      "button",
+      { className: "btn btn1-01", "data-message": "button2", tabindex: "0" },
+      "button2"
+    )
+  );
+}
+
 var RkrkItemBox101 = function (_React$Component) {
   _inherits(RkrkItemBox101, _React$Component);
 
@@ -181,7 +224,7 @@ var RkrkItemBox101 = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (RkrkItemBox101.__proto__ || Object.getPrototypeOf(RkrkItemBox101)).call(this, props));
 
     _this.state = {
-      // property1: ""
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,..."
     };
 
     // 
@@ -209,36 +252,9 @@ var RkrkItemBox101 = function (_React$Component) {
       return React.createElement(
         "div",
         { className: "rkitemBox101" },
-        React.createElement(
-          "div",
-          { className: "rkitemBox101_img-holder" },
-          React.createElement("img", { src: "img.jpg", alt: "img alt", title: "Image Title" })
-        ),
-        React.createElement(
-          "h3",
-          { className: "rkitemBox101_heading" },
-          "ItemBox title"
-        ),
-        React.createElement("hr", null),
-        React.createElement(
-          "p",
-          null,
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        ),
-        React.createElement(
-          "div",
-          { className: "rkitemBox101_btn-holder" },
-          React.createElement(
-            "button",
-            { className: "btn btn1-01", "data-message": "button1", tabindex: "0" },
-            "button1"
-          ),
-          React.createElement(
-            "button",
-            { className: "btn btn1-01", "data-message": "button2", tabindex: "0" },
-            "button2"
-          )
-        )
+        React.createElement(RkItemBox101_imgHolder, null),
+        React.createElement(RkItemBox101_content, { pr_text: this.state.text }),
+        React.createElement(RkItemBox101_btnHolder, null)
       );
     }
   }]);
