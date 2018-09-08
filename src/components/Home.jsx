@@ -11,7 +11,9 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkItemBox101 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">
+        <RkItemBox101 />
+      </div>
     </div>
 
   {/*rkItemBox102*/}
@@ -20,7 +22,9 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkItemBox102 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">
+        <RkItemBox102 />
+      </div>
     </div>
 
     </div>
